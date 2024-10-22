@@ -6,6 +6,7 @@ import ProductDetails from './components/ProductDetails';
 import Cart from './components/Cart';
 import Header from './components/Header';
 import { useState } from 'react';
+import Admin from './components/Admin';
 
 function App() {
   const [ cartItems, setCartItems] = useState([])
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={<Products handleAddToCart={handleAddToCart} />}/>
           <Route path='/detail/:id' element={<ProductDetails handleAddToCart={handleAddToCart}/>}/>
           <Route path='/cart' element={<Cart cartItems={cartItems} handleCheckout={handleCheckout}/>}/>
+          <Route path='/admin' element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );
